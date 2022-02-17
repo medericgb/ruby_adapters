@@ -77,7 +77,7 @@ class SendMailAdapter < Adapter
   end
 end
 
-class Techshelter
+class Alpha
   def print_document(document, printer)
     printer.print(document)
   end
@@ -89,6 +89,6 @@ printer = HPPrinter.new
 # printer = SamsungPrinter.new
 emailer = SendDocByEmail.new
 
-Techshelter.new.print_document(document, HPPrinterAdapter.new(printer))
-# Techshelter.new.print_document(document, CannonPrinterAdapter.new(printer))
-Techshelter.new.print_document(document, SendMailAdapter.new(emailer))
+Alpha.new.print_document(document, HPPrinterAdapter.new(printer))
+# Alpha.new.print_document(document, CannonPrinterAdapter.new(printer))
+Alpha.new.print_document(document, SendMailAdapter.new(emailer))
